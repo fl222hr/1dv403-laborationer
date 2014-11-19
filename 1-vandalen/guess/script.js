@@ -1,8 +1,8 @@
 "use strict";
 
 window.onload = function(){
-	
-	var secret = 50; // Detta tal behöver bytas ut mot ett slumpat tal.
+
+	var secret = Math.floor( Math.random() * 100)+1; // Slumpa ett tal mellan 0-100.
 	var guesses = 0; // tal för att hålla koll på antalet gissningar
 	
 	// I denna funktion ska du skriva koden för att hantera "spelet"
@@ -16,7 +16,7 @@ window.onload = function(){
 		return	[false, "Talet är utanför intervallet 0 - 100"]	;
 		}
 		if(number > secret){
-		return [false, "Det hemliga talet är högre!"];
+		return [false, "Det hemliga talet är lägre!"];
 		}
 		if(number < secret){
 		return	[false, "Det hemliga talet är högre!"];

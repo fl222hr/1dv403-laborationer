@@ -7,10 +7,28 @@ window.onload = function(){
 		// Plats för förändring.		
 		// Returnera den konverterade strängen.
 		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
-	
-
-
-
+		try{
+			if(str == ""){
+				throw "Du matade inte in någon sträng!";
+			}
+			var characters = str.split("");
+			var newString = "";
+			for(var i = 0; i < characters.length; i++){
+				if(characters[i] == characters[i].toLowerCase()){ 
+					characters[i] = characters[i].toUpperCase();
+				}else{
+					characters[i] = characters[i].toLowerCase();
+				}
+				if (characters[i] == "A"|| characters[i] == "a") characters[i] = "#";
+				newString = newString+characters[i];
+			}
+			
+			return newString;
+		}
+		catch (err)
+		{
+			return err;
+		}
 
 
 

@@ -12,9 +12,9 @@ window.onload = function(){
 		console.log("Du gissade: " + number); // Detta nummer är det som användaren gissade på.
 		
 		if(number < 0 || number >100){
+		guesses--;//om det inmatade inte är ett giltigt tal bör det inte räknas som en gissning
 		return	[false, "Talet är utanför intervallet 0 - 100"]	;
 		}
-			
 		if(number > secret){
 		return [false, "Det hemliga talet är högre!"];
 		}
@@ -23,6 +23,10 @@ window.onload = function(){
 		}
 		if(number == secret){
 		return [true, "Grattis du vann! Det hemliga talet var "+secret+" och du behövde "+guesses+" gissningar för att hitta det."];
+		}
+		else{
+			guesses--; //om det inmatade inte är ett tal bör det inte räknas som en gissning
+			return	[false, "Inte ett tal mellan 0-100"];
 		}
 
 

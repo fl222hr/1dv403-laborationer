@@ -4,10 +4,29 @@ window.onload = function(){
 
 	
 	var birthday = function(date){
-		
-
-
-			// Din kod här.
+			var birthDate = new Date(date); //hämta födelsedatumet
+			
+			var currentDate = new Date(); //ta in nuvarande tid
+			var currentYear = currentDate.getFullYear(); // ta in nuvarande år
+			
+			var theBirthDay = new Date(date); //Skapa variabel för födelsedag
+			theBirthDay.setFullYear(currentYear); //Sätta födelsedag till detta år
+			
+			var msToCurrentDate = currentDate.getTime();
+			var msToBirthDay = theBirthDay.getTime();
+			
+			var differens = msToBirthDay - msToCurrentDate; //räkna ut hur många milisekunder det är mellan dagens datum och födelsedagen detta år
+			
+			if(differens < 0){ //om födelsedagen redan har varit, sätt till nästa år
+				theBirthDay.setFullYear(currentYear+1);
+				msToBirthDay = theBirthDay.getTime();
+				differens = msToBirthDay - msToCurrentDate;
+			}
+			
+			var dagar = differens / (1000 * 60 * 60 * 24); //räkna om ms till dagar
+			dagar = Math.round(dagar); //avrunda till närmaste heldag
+			
+			return dagar;
 
 
 

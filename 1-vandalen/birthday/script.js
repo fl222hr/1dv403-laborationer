@@ -4,6 +4,14 @@ window.onload = function(){
 
 	
 	var birthday = function(date){
+		
+			// Validate date string??
+			var validDate = date.match(/(\d{4})-(\d{2})-(\d{2})/);
+		try {
+			if(validDate[1].length != 4) throw "Fel på året";
+			if(validDate[2].length != 2 && validDate > 12) throw "Fel på månad";
+			if(validDate[3].length != 2 && validDate > 31) throw "Fel på dag";
+			
 			var birthDate = new Date(date); //hämta födelsedatumet
 			
 			var currentDate = new Date(); //ta in nuvarande tid
@@ -27,6 +35,10 @@ window.onload = function(){
 			dagar = Math.round(dagar); //avrunda till närmaste heldag
 			
 			return dagar;
+		} catch (e) {
+			alert(e);
+		}
+
 
 
 

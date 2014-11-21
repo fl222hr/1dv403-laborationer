@@ -7,7 +7,7 @@ window.onload = function(){
 		
 			// Validate date string??
 			var validDate = date.match(/(\d{4})-(\d{2})-(\d{2})/);
-		try {
+
 			if(validDate[1].length != 4) throw "Fel på året";
 			if(validDate[2].length != 2 && validDate > 12) throw "Fel på månad";
 			if(validDate[3].length != 2 && validDate > 31) throw "Fel på dag";
@@ -32,12 +32,10 @@ window.onload = function(){
 			}
 			
 			var dagar = differens / (1000 * 60 * 60 * 24); //räkna om ms till dagar
-			dagar = Math.round(dagar); //avrunda till närmaste heldag
+			dagar = Math.ceil(dagar); //avrunda till närmaste heldag
 			
 			return dagar;
-		} catch (e) {
-			alert(e);
-		}
+
 
 
 

@@ -2,7 +2,6 @@
 
 var makePerson = function(persArr){
   
-    console.log("Hej");
     var theNames = new Array();
     var theMaxAge = 0;
     var theMinAge = 1000;
@@ -16,12 +15,20 @@ var makePerson = function(persArr){
     theNames.push(persArr[i].name);
   }
     
-    theNames.sort();
-      for(var i = 0; i < theNames.length; i++){
-    nameString = nameString + theNames[i] + ",";
-  }
+    theAverageAge = Math.round(theAverageAge / persArr.length);
     
-    var result = {
+    
+    theNames.sort(function (a, b){
+      return a.localeCompare(b);
+    });
+    
+      for(var i = 0; i < (theNames.length -1); i++){
+    nameString = nameString + theNames[i] + ", ";
+  }
+    nameString = nameString + theNames[i];
+    
+    
+  var result = {
         minAge: theMinAge, 
         maxAge: theMaxAge, 
         averageAge: theAverageAge,
@@ -29,6 +36,7 @@ var makePerson = function(persArr){
     };
     
     return result;
-	// Din kod här...
-}
+
+
+};
 

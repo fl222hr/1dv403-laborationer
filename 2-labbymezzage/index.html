@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Message Board </title>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>    
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+    <title>Message Board </title>
     </head>
     <body>
 
+    <h1>Meddelanden</h1>    
+
+    <div class ="row">
+          <div id="messageBoard">
+                <div id="messageBoardInfo">
+                    <h4>Antal meddelanden: 0</h4>
+                </div>
+                <div id="messageArea">
+                    
+                </div>
+         </div>
+    </div>
+    <div class ="row">
+          <div id="messageControls">
+            <p>Meddelande:
+            <textarea class="form-control" id="messageInput" value="textArea"/></textarea>
+            </p>
+            <input type="submit" id="sendMessage" class="btn btn-default" value="Skicka meddelande"/>
+
+    </div>
+    </div>
+
+    
+    
+
+    <script src="Message.js"></script>
+    <script src="MessageBoard.js"></script>
     </body>
 </html>

@@ -12,6 +12,7 @@ var messageBoard = {
             var newMessage = document.getElementById("messageInput").value;
             this.messages.push(new Message(newMessage, new Date()));
             this.renderMessages();
+            document.getElementById("messageInput").value  = "";
         },
         
         renderMessage:function(m){
@@ -62,9 +63,12 @@ var messageBoard = {
           
           // Ta bort ett meddelande
           removeMessage:function(messageToRemove){
-              alert("fire");
-              this.messages.splice(messageToRemove,1);
-              this.renderMessages();
+              var remove = confirm("Är du säker?");
+              if(remove){
+                this.messages.splice(messageToRemove,1);
+                this.renderMessages();
+              }
+
           }
         
 };
@@ -73,6 +77,7 @@ window.onload = function(){
  document.getElementById("sendMessage").onclick = function() {
      messageBoard.addMessage();
  };
+
     
 };
 

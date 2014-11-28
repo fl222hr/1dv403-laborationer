@@ -5,7 +5,6 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/bootstrap.css" rel="stylesheet">
         <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
     <title>Message Board </title>
     </head>
     <body>
@@ -15,7 +14,7 @@
     <div class ="row">
           <div id="messageBoard">
                 <div id="messageBoardInfo">
-                    <h4>Antal meddelanden: 0</h4>
+                    <h4 id="counter">Antal meddelanden: 0</h4>
                 </div>
                 <div id="messageArea">
                     
@@ -25,7 +24,7 @@
     <div class ="row">
           <div id="messageControls">
             <p>Meddelande:
-            <textarea class="form-control" id="messageInput" value="textArea"/></textarea>
+            <textarea class="form-control" id="messageInput"></textarea>
             </p>
             <input type="submit" id="sendMessage" class="btn btn-default" value="Skicka meddelande"/>
 

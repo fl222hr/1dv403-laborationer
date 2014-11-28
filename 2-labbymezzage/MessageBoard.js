@@ -8,13 +8,17 @@ var messageBoard = {
 
         },
         
+        //Lägg till ett meddelande till arrayen
         addMessage:function(){
             var newMessage = document.getElementById("messageInput").value;
             this.messages.push(new Message(newMessage, new Date()));
             this.renderMessages();
             document.getElementById("messageInput").value  = "";
+            this.updateCounter(1);
         },
         
+        
+        //Skriv ut ett meddelande på skärmen
         renderMessage:function(m){
             
             //Skapa en div för att skriva ut meddelanden
@@ -67,9 +71,18 @@ var messageBoard = {
               if(remove){
                 this.messages.splice(messageToRemove,1);
                 this.renderMessages();
+                this.updateCounter(-1);
               }
 
+          },
+          
+          updateCounter:function(change){
+              this.messageCount = this.messageCount + change;
+              var counterText = "Antal meddelanden: " + (this.messageCount);
+              document.getElementById("counter").innerHTML = counterText;
           }
+          
+          
         
 };
 
@@ -81,10 +94,6 @@ window.onload = function(){
     
 };
 
-//document.getElementByID("sendMessage").onclick = function(){alert("test");};
-//messageBoard.messages.push(new Message("Första Meddelandet", new Date()));
-//messageBoard.messages.push(new Message("Andra Meddelandet", new Date()));
-//messageBoard.messages.push(new Message("Tredje Meddelandet", new Date()));
-//messageBoard.renderMessages();
+
 
 

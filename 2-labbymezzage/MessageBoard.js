@@ -3,11 +3,6 @@ var messageBoard = {
     messageCount : 0,
     messages: [],
     
-    
-        init:function(){
-
-        },
-        
         //Lägg till ett meddelande till arrayen
         addMessage:function(){
             var newMessage = document.getElementById("messageInput").value;
@@ -48,6 +43,16 @@ var messageBoard = {
             text.className = "message";         //Lägger på klassen Message på meddelandet
             div.appendChild(text);
             
+            //Skapa en timestamp
+            var timeStamp = document.createElement("p");
+            var seconds = this.messages[m].getDate().getSeconds();
+            var minutes = this.messages[m].getDate().getMinutes();
+            var hours = this.messages[m].getDate().getHours();
+            timeStamp.innerHTML = (hours<10 ? "0" : "") + hours + ":" +(minutes<10 ? "0" : "") + minutes + ":" + (seconds<10 ? "0" : "") + seconds;
+            timeStamp.className = "timeStamp";         //Lägger på klassen Message på meddelandet
+            div.appendChild(timeStamp);
+            
+            
 
         },
         
@@ -76,11 +81,19 @@ var messageBoard = {
 
           },
           
+          //Funktion för att uppdatera countern
           updateCounter:function(change){
               this.messageCount = this.messageCount + change;
               var counterText = "Antal meddelanden: " + (this.messageCount);
               document.getElementById("counter").innerHTML = counterText;
+          },
+          
+          enterPressed:function(){
+              messageBoard.addMessage();
+              document.getElementById("messageInput").value = "";
           }
+          
+          
           
           
         
@@ -90,6 +103,18 @@ window.onload = function(){
  document.getElementById("sendMessage").onclick = function() {
      messageBoard.addMessage();
  };
+ 
+ document.getElementById("messageInput").onkeypress = function(e) {
+    if(e.shiftKey === false){
+        if (e.which == 13){
+            e.preventDefault();
+            messageBoard.enterPressed();
+        }
+    }
+    
+    
+};
+
 
     
 };

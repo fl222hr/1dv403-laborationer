@@ -46,10 +46,17 @@
 .message{
     margin-left:5px;
     width: 400px;
+    font-size:18px;
 
 }
 
 .date{
+    margin-top:5px;
+    text-align:right;
+}
+
+.timeStamp{
+    margin-right:5px;
     margin-top:5px;
     text-align:right;
 }

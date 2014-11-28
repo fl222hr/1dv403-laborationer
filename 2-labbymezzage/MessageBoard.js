@@ -5,10 +5,12 @@ var messageBoard = {
     
     
         init:function(){
-             document.getElementById("sendMessage").onclick = function() {
+            //Lägga till onclick på knappen
+            document.getElementById("sendMessage").onclick = function() {
             messageBoard.addMessage();
-        };
+            };
  
+            //Lyssna efter enter och shift-enter
             document.getElementById("messageInput").onkeypress = function(e) {
                 if(e.shiftKey === false){
                     if (e.which == 13){
@@ -19,7 +21,6 @@ var messageBoard = {
             };
         },
     
-    
         //Lägg till ett meddelande till arrayen
         addMessage:function(){
             var newMessage = document.getElementById("messageInput").value;
@@ -28,7 +29,6 @@ var messageBoard = {
             document.getElementById("messageInput").value  = "";
             this.updateCounter(1);
         },
-        
         
         //Skriv ut ett meddelande på skärmen
         renderMessage:function(m){
@@ -60,7 +60,7 @@ var messageBoard = {
             text.className = "message";         //Lägger på klassen Message på meddelandet
             div.appendChild(text);
             
-            //Skapa en timestamp
+            //Skapa en paragraf för timestamp
             var timeStamp = document.createElement("p");
             var seconds = this.messages[m].getDate().getSeconds();
             var minutes = this.messages[m].getDate().getMinutes();
@@ -72,7 +72,6 @@ var messageBoard = {
             
 
         },
-        
         
         //Rensa skärmen och skriva ut alla meddelanden
         renderMessages:function(){

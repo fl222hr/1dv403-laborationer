@@ -1,6 +1,5 @@
 function Message(message, date){
     
-    var _date = date;
     
     this.getText = function(){
         return message;
@@ -11,11 +10,11 @@ function Message(message, date){
     }
     
     this.getDate = function(){
-        return _date;
+        return date;
     }
     
-    this.setDate = function(date){
-        _date = date;
+    this.setDate = function(newDate){
+        date = newDate;
     }
 }
 

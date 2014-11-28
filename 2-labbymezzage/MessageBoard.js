@@ -13,9 +13,9 @@ var messageBoard = {
                 if(e.shiftKey === false){
                     if (e.which == 13){
                     e.preventDefault();
-                    messageBoard.enterPressed();
+                    messageBoard.addMessage();
                     }
-                    }
+                }
             };
         },
     
@@ -42,7 +42,7 @@ var messageBoard = {
             var remove = document.createElement("span");
             remove.className = "glyphicon glyphicon-remove";
             remove.onclick = function(){
-                messageBoard.removeMessage(m);
+                messageBoard.removeMessage(m);  //Varför inte this. ?
             };
             div.appendChild(remove); 
             
@@ -88,7 +88,7 @@ var messageBoard = {
           } ,
           
           // Ta bort ett meddelande
-          removeMessage:function(messageToRemove){
+        removeMessage:function(messageToRemove){
               var remove = confirm("Är du säker?");
               if(remove){
                 this.messages.splice(messageToRemove,1);
@@ -99,21 +99,12 @@ var messageBoard = {
           },
           
           //Funktion för att uppdatera countern
-          updateCounter:function(change){
+        updateCounter:function(change){
               this.messageCount = this.messageCount + change;
               var counterText = "Antal meddelanden: " + (this.messageCount);
               document.getElementById("counter").innerHTML = counterText;
           },
-          
-          enterPressed:function(){
-              messageBoard.addMessage();
-              document.getElementById("messageInput").value = "";
-          }
-          
-          
-          
-          
-        
+
 };
 
 window.onload = function(){

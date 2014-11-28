@@ -64,6 +64,7 @@
 span{
     float:right;
     margin-right:2px;
+    cursor: pointer;
 }
 p{
     border-radius:10%;

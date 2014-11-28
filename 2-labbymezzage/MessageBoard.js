@@ -3,6 +3,23 @@ var messageBoard = {
     messageCount : 0,
     messages: [],
     
+    
+        init:function(){
+             document.getElementById("sendMessage").onclick = function() {
+            messageBoard.addMessage();
+        };
+ 
+            document.getElementById("messageInput").onkeypress = function(e) {
+                if(e.shiftKey === false){
+                    if (e.which == 13){
+                    e.preventDefault();
+                    messageBoard.enterPressed();
+                    }
+                    }
+            };
+        },
+    
+    
         //Lägg till ett meddelande till arrayen
         addMessage:function(){
             var newMessage = document.getElementById("messageInput").value;
@@ -100,21 +117,8 @@ var messageBoard = {
 };
 
 window.onload = function(){
- document.getElementById("sendMessage").onclick = function() {
-     messageBoard.addMessage();
- };
- 
- document.getElementById("messageInput").onkeypress = function(e) {
-    if(e.shiftKey === false){
-        if (e.which == 13){
-            e.preventDefault();
-            messageBoard.enterPressed();
-        }
-    }
-    
-    
-};
 
+messageBoard.init();
 
     
 };

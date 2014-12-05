@@ -41,6 +41,17 @@
     background-color: #428bca ;
     margin-left:10px;
     color:white;
+    -webkit-box-shadow: 5px 5px 5px gray;
+    -moz-box-shadow: 5px 5px 5px gray;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.messageBox:hover{
+    -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .message{
@@ -65,6 +76,14 @@ span{
     float:right;
     margin-right:2px;
     cursor: pointer;
+}
+
+span:hover{
+        -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 p{
     border-radius:10%;

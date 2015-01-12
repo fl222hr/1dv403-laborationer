@@ -11,7 +11,9 @@ function Tab(ID, parent, name, width, height, topMargin, stickerWidth){
     //tab.style.marginLeft = "-" + width + "px";
     document.getElementById(parent).appendChild(tab);
     
-    tab.innerHTML = name;
+    var label = document.createElement('div');
+    label.innerHTML = name;
+    tab.appendChild(label);
     
     var container = document.createElement('div');
     container.className = "container";
@@ -22,7 +24,7 @@ function Tab(ID, parent, name, width, height, topMargin, stickerWidth){
     container.style.marginTop = (-width/(height/width)) + "px";
     tab.appendChild(container);
     
-    tab.onclick = function(){
+    label.onclick = function(){
      if(!active){
      tab.className = "tabActive";
      active = true;

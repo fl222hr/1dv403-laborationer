@@ -1,6 +1,10 @@
+/*#B7B6C1
+*/
 body{
     padding:0px;
     margin:0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:lighter;
 }
 #desktop{
     overflow:hidden;
@@ -11,24 +15,30 @@ body{
     background-size:cover;
 }
 .container{
-    background-color:blue;
+    background-color:#94958B;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    border-bottom-right-radius:10px;
+    border-style:solid;
+    border-color:gray;
 }
 .tab{
-    font-size:18px;
+    color:white;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    font-size:16px;
     height:30px;
     position:absolute;
-    background-color:red;
+    background-color:#464655;
     text-align:center;
-      -webkit-transition:all .5s ease-out;
-      -moz-transition:all .5s ease-out;
-      -ms-transition:all .5s ease-out;
-      -o-transition:all .5s ease-out;
-      transition:all .5s ease-out;
+    -webkit-transition:all .5s ease-out;
+    -moz-transition:all .5s ease-out;
+    -ms-transition:all .5s ease-out;
+    -o-transition:all .5s ease-out;
+    transition:all .5s ease-out;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -38,15 +48,18 @@ body{
 }
 
 .tabActive{
-          -webkit-transition:all .5s ease-out;
-      -moz-transition:all .5s ease-out;
-      -ms-transition:all .5s ease-out;
-      -o-transition:all .5s ease-out;
-      transition:all .5s ease-out;
-    font-size:18px;
+    color:white;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    -webkit-transition:all .5s ease-out;
+    -moz-transition:all .5s ease-out;
+    -ms-transition:all .5s ease-out;
+    -o-transition:all .5s ease-out;
+    transition:all .5s ease-out;
+    font-size:16px;
     height:30px;
     position:absolute;
-    background-color:red;
+    background-color:#464655;
     text-align:center;
     -webkit-transform: rotate(90deg) translate(0px, -400px);
     -moz-transform: rotate(90deg) translate(0px, -400px);

@@ -21,7 +21,7 @@ var DesktopApp ={
         
     document.body.appendChild(desktop); //add the desktop to the "site"
     
-    var backgroundTab = new Tab("bgTab", this.desktopID, "background", 400, 800, 50, 100);
+    var backgroundTab = new Tab("bgTab", this.desktopID, "Background", 400, 800, 50, 100);
     
     },
     

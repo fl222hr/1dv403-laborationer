@@ -1,0 +1,57 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+#desktop{
+    overflow:hidden;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    height:1000px;
+    background-size:cover;
+}
+.container{
+    background-color:blue;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.tab{
+    font-size:18px;
+    height:30px;
+    position:absolute;
+    background-color:red;
+    text-align:center;
+      -webkit-transition:all .5s ease-out;
+      -moz-transition:all .5s ease-out;
+      -ms-transition:all .5s ease-out;
+      -o-transition:all .5s ease-out;
+      transition:all .5s ease-out;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    padding:0px;
+}
+
+.tabActive{
+          -webkit-transition:all .5s ease-out;
+      -moz-transition:all .5s ease-out;
+      -ms-transition:all .5s ease-out;
+      -o-transition:all .5s ease-out;
+      transition:all .5s ease-out;
+    font-size:18px;
+    height:30px;
+    position:absolute;
+    background-color:red;
+    text-align:center;
+    -webkit-transform: rotate(90deg) translate(0px, -400px);
+    -moz-transform: rotate(90deg) translate(0px, -400px);
+    -ms-transform: rotate(90deg) translate(0px, -400px);
+    -o-transform: rotate(90deg) translate(0px, -400px);
+    transform: rotate(90deg) translate(0px, -400px); 
+    padding:0px;
+}

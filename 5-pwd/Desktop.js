@@ -18,26 +18,11 @@ var DesktopApp ={
     //Setup the desktop    
     var desktop = document.createElement('div');
     desktop.id = this.desktopID;
-    
-        //Setup the toolbar
-        var toolbar = document.createElement('div');
-        toolbar.id = this.toolbarID;
-        toolbar.innerHTML = "En Toolbar";
-        desktop.appendChild(toolbar);
-        
-        //Setup the button
-        var button = document.createElement('div');
-        button.id = this.buttonID;
-        toolbar.appendChild(button);
-        
-       button.onclick = function(_index){
-       console.log("Click");
-           
-       }
-        
         
     document.body.appendChild(desktop); //add the desktop to the "site"
-
+    
+    var backgroundTab = new Tab("bgTab", this.desktopID, "background", 400, 800, 50, 100);
+    
     },
     
     setBackground:function(imageUrl){

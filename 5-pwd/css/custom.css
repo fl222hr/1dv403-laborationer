@@ -23,6 +23,20 @@ body{
     background-size:contain;
     cursor:pointer;
 }
+.thumbnail{
+    margin-left:5px;
+    margin-top:5px;
+    float:left;
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+    border-radius:5px;
+    background-position:center;
+    background-repeat:no-repeat;
+    width:200px;
+    height:80px;
+    cursor:pointer;
+}
 
 .popup{
     background-color:#94958B;
@@ -96,57 +110,33 @@ body{
     border-bottom-right-radius:5px; 
 }
 
-.container{
-    background-color:#94958B;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    border-bottom-right-radius:10px;
-    border-style:solid;
-    border-color:gray;
-}
-.tab{
-    color:white;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-    font-size:16px;
-    height:30px;
-    position:absolute;
-    background-color:#464655;
-    text-align:center;
-    -webkit-transition:all .5s ease-out;
-    -moz-transition:all .5s ease-out;
-    -ms-transition:all .5s ease-out;
-    -o-transition:all .5s ease-out;
-    transition:all .5s ease-out;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-    padding:0px;
+.status {
+    margin-left:5px;
+    margin-top:2px;
+    height:35px;
+    float:left;
+    background-image: url("images/ajax-loader.gif");
 }
 
-.tabActive{
-    color:white;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-    -webkit-transition:all .5s ease-out;
-    -moz-transition:all .5s ease-out;
-    -ms-transition:all .5s ease-out;
-    -o-transition:all .5s ease-out;
-    transition:all .5s ease-out;
-    font-size:16px;
+.ajaxLoader{
+    float:left;
+    margin-left:2px;
+    margin-top:2px;
     height:30px;
-    position:absolute;
-    background-color:#464655;
-    text-align:center;
-    -webkit-transform: rotate(90deg) translate(0px, -400px);
-    -moz-transform: rotate(90deg) translate(0px, -400px);
-    -ms-transform: rotate(90deg) translate(0px, -400px);
-    -o-transform: rotate(90deg) translate(0px, -400px);
-    transform: rotate(90deg) translate(0px, -400px); 
-    padding:0px;
+    width:30px;
+    background-color:blue;
+    background-size:contain;
+    background-image: url("images/ajax-loader.gif");
+}
+
+.statusText{
+    float:left;
+    margin-left:5px;
+    margin-top:2px;
+    color: white;
+    line-height:30px;
+}
+
+.hidden{
+    display:none;
 }

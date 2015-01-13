@@ -47,9 +47,19 @@ function Popup(ID, parent, name, iconURL, width, height, leftMargin, topMargin){
     bottomBar.className = "bottomBar";
     popup.appendChild(bottomBar);
     
-        var statusText = document.createElement('div');
-        statusText.className = "statusText";
-        bottomBar.appendChild(statusText);
+        var status = document.createElement('div');
+        status.className = "statusText";
+        status.id = ID + "Status";
+        bottomBar.appendChild(status);
+            
+            var ajaxLoader = document.createElement('div');
+            ajaxLoader.className = "ajaxLoader";
+            status.appendChild(ajaxLoader);
+            
+            var statusText = document.createElement('div');
+            statusText.className = "statusText";
+            statusText.innerHTML = "Laddar...";
+            status.appendChild(statusText);
     
     
     closeButton.onclick = function(){

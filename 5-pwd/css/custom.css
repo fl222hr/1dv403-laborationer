@@ -115,7 +115,6 @@ body{
     margin-top:2px;
     height:35px;
     float:left;
-    background-image: url("images/ajax-loader.gif");
 }
 
 .ajaxLoader{
@@ -124,9 +123,8 @@ body{
     margin-top:2px;
     height:30px;
     width:30px;
-    background-color:blue;
+    background: url("../images/ajax-loader.gif");
     background-size:contain;
-    background-image: url("images/ajax-loader.gif");
 }
 
 .statusText{

@@ -51,7 +51,7 @@ var DesktopApp ={
     openPopup:function(){
 
     if(!document.getElementById(DesktopApp.backgroundPopupID)){ //Check if popup already exist
-    var popup = new Popup("bgPopup", DesktopApp.desktopID, "Choose Background", DesktopApp.backgrounIcon, 420, 840, 200, 50); //Create new popup
+    var popup = new Popup("bgPopup", DesktopApp.desktopID, "Välj bakgrundsbild", DesktopApp.backgrounIcon, 420, 840, 200, 50); //Create new popup
     DesktopApp.loadThumbnails(); //Ladda in tumbnails
     }
     },

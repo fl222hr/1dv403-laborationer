@@ -20,8 +20,8 @@ function Tab(ID, parent, name, width, height, topMargin, stickerWidth){
     container.ID = ID;
     container.style.width = width + "px";
     container.style.height = height + "px";
-    container.style.marginLeft = (width/(height/width)) + "px";
-    container.style.marginTop = (-width/(height/width)) + "px";
+    container.style.marginLeft = (width/2) + "px";
+    container.style.marginTop = (-width/2) + "px";
     tab.appendChild(container);
     
     label.onclick = function(){

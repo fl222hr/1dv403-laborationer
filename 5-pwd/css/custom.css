@@ -14,6 +14,88 @@ body{
     height:1000px;
     background-size:cover;
 }
+
+.icon{
+    width:50px;
+    height:50px;
+    margin-left:50px;
+    margin-top:50px;
+    background-size:contain;
+    cursor:pointer;
+}
+
+.popup{
+    background-color:#94958B;
+    border-radius:5px;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+}
+
+.topBar{
+    width:100%;
+    height:5%;
+    background-color:#464655;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+.headline{
+    margin-left:5px;
+    margin-top:2px;
+    height:35px;
+    float:left;
+}
+
+.headlineIcon{
+    float:left;
+    margin-left:2px;
+    margin-top:2px;
+    height:30px;
+    width:30px;
+    background-size:contain;
+}
+
+.headlineText{
+    float:left;
+    color:white;
+    line-height:30px;
+    margin-top:2px;
+    margin-left:5px;
+}
+
+.closeButton{
+    text-align:center;
+    line-height:30px;
+    color:white;
+    margin-top:5px;
+    margin-right:5px;
+    height:30px;
+    width:30px;
+    background-color:black;
+    float:right;
+    cursor:pointer;
+}
+
+.closeButton:hover{
+    cursor:pointer;
+}
+
+.popupContent{
+    width:100%;
+    height:90%;
+    background-color:#94958B;
+    overflow:scroll;
+}
+
+.bottomBar{
+    width:100%;
+    height:5%;
+    background-color:#464655;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px; 
+}
+
 .container{
     background-color:#94958B;
     -webkit-transform: rotate(-90deg);

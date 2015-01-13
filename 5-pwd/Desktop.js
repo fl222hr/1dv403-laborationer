@@ -3,6 +3,7 @@
 var DesktopApp ={
     
     defaultBackground: "images/default.png", //variable to keep url to default background
+    backgrounIcon: "images/bgIcon.png",
     desktopID: "desktop",
     toolbarID: "toolbar",
     buttonID:"button",
@@ -18,11 +19,20 @@ var DesktopApp ={
     //Setup the desktop    
     var desktop = document.createElement('div');
     desktop.id = this.desktopID;
-        
     document.body.appendChild(desktop); //add the desktop to the "site"
     
-    var backgroundTab = new Tab("bgTab", this.desktopID, "Background", 400, 800, 50, 100);
+    var icon = document.createElement('div');
+    icon.className = "icon";
+    icon.style.backgroundImage = "url(\""+this.backgrounIcon+"\")";
+    desktop.appendChild(icon);
+    icon.onclick = this.openPopup;
     
+    //var backgroundTab = new Tab("bgTab", this.desktopID, "Background", 400, 800, 50, 100);
+    },
+    
+    openPopup:function(){
+    var popup = new Popup("bgPopup", DesktopApp.desktopID, "Choose Background", DesktopApp.backgrounIcon, 400, 800, 200, 50);
+
     },
     
     setBackground:function(imageUrl){

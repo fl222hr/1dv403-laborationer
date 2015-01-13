@@ -35,10 +35,23 @@ var DesktopApp ={
         xhr.onreadystatechange = function(){
             if(xhr.readyState === 4 && xhr.status === 200){
             var thumbs = JSON.parse(xhr.responseText);
+            var height = 0;
+            var width = 0;
+            console.log(thumbs)
+            
+            for(var i = 0; i < thumbs.length; i++)
+                if(thumbs[i]["thumbWidth"] > width){
+                    width = thumbs[i]["thumbWidth"];
+                
+                if(thumbs[i]["thumbHeight"] > height)
+                    height = thumbs[i]["thumbHeight"];
+                
+            }
+            
 
             //Loop through the results from the requests and create new Thumbnail
             for(var i = 0; i < thumbs.length; i++){
-            var thumb = new Thumbnail(DesktopApp.backgroundPopupID, DesktopApp.desktopID, thumbs[i]["thumbURL"], thumbs[i]["URL"]);
+            var thumb = new Thumbnail(DesktopApp.backgroundPopupID, DesktopApp.desktopID, thumbs[i]["thumbURL"], thumbs[i]["URL"], width, height);
             }
             document.getElementById(DesktopApp.backgroundPopupID+"Status").className += " hidden"; //Remove the status text for loading
             }
